@@ -1,123 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap");
 .navbar {
-    margin-top: 29px;
-    width: 80%;
+  margin-top: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  &__left {
+    width: 50%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    &__left {
-      width: 50%;
+    gap: 17px;
+    &__logo {
       display: flex;
-      gap: 17px;
-      &__logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        & img {
-          width: 29px;
-          aspect-ratio: 1 / 1;
-        }
-      }
-  
-      &__text {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: var(--paragraph-1);
-        font-weight: 700;
-        color: var(--blue);
+      align-items: center;
+      justify-content: center;
+      & img {
+        width: 29px;
+        aspect-ratio: 1 / 1;
       }
     }
-  
-    &__right {
-      width: 50%;
+
+    &__text {
       display: flex;
-      justify-content: flex-end;
-      &__items {
-        display: flex;
-        gap: 35px;
-  
-        &__item {
-          cursor: pointer;
-          text-decoration: none;
-          color: #000000;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--paragraph-1);
+      font-weight: 700;
+      color: var(--blue);
+    }
+  }
+
+  &__right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    &__items {
+      display: flex;
+      gap: 35px;
+
+      &__item {
+        cursor: pointer;
+        text-decoration: none;
+        color: #000000;
+        &#icon {
+          display: none;
+        }
+
+        @media (max-width: 1000px) {
           &#icon {
+            display: block;
+          }
+          &#item {
             display: none;
           }
-  
-          @media (max-width: 1000px) {
-            &#icon {
-              display: block;
-            }
-            &#item {
-              display: none;
-            }
-          }
         }
-      }
-    }
-  
-    &__menu_expanded {
-      position: absolute;
-      width: 100%;
-      top: 0;
-      left: 0;
-      background-color: var(--background-color);
-      transition: max-height 0.5s ease;
-      max-height: 0;
-      overflow: hidden;
-  
-      &.show {
-        max-height: 100%;
-      }
-  
-      &__title {
-        color: #121212;
-        display: flex;
-        margin-top: 27px;
-  
-        &__left {
-          font-family: Inter;
-          font-size: 20px;
-          font-weight: 700;
-          width: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
-          padding-left: 25px;
-        }
-  
-        &__right {
-          width: 50%;
-          padding-right: 25px;
-          text-align: right;
-          & * {
-            cursor: pointer;
-            font-size: 20px;
-          }
-        }
-      }
-  
-      &__items {
-        margin-left: 25px;
-        margin-top: 40px;
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-  
-        &__item {
-          cursor: pointer;
-          text-decoration: none;
-          color: #000000;
-        }
-      }
-  
-      &__line {
-        width: 100%;
-        background-color: var(--blue);
-        height: 3px;
-        margin-top: 50px;
       }
     }
   }
-  
+
+  &__menu_expanded {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--background-color);
+    transition: max-height 0.5s ease;
+    max-height: 0;
+    overflow: hidden;
+
+    &.show {
+      max-height: 100%;
+    }
+
+    &__title {
+      color: #121212;
+      display: flex;
+      margin-top: 27px;
+
+      &__left {
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 700;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 25px;
+      }
+
+      &__right {
+        width: 50%;
+        padding-right: 25px;
+        text-align: right;
+        & * {
+          cursor: pointer;
+          font-size: 20px;
+        }
+      }
+    }
+
+    &__items {
+      margin-left: 25px;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+
+      &__item {
+        cursor: pointer;
+        text-decoration: none;
+        color: #000000;
+      }
+    }
+
+    &__line {
+      width: 100%;
+      background-color: var(--blue);
+      height: 3px;
+      margin-top: 50px;
+    }
+  }
+}
+
+.navbar_brand {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background-color: white;
+  width: fit-content;
+  &__logo {
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+    background: #d7d7d7;
+  }
+
+  &__title {
+    font-size: 30px;
+    font-family: "Just Another Hand", cursive;
+    font-style: normal;
+  }
+
+  @media screen and (max-width: 768px) {
+    &__logo {
+      width: 20px;
+    }
+    &__title {
+      font-size: 20px;
+    }
+  }
+}
+
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

@@ -1,13 +1,25 @@
 import "./Footer.scss";
+import { ReactComponent as Refresh } from "../../assets/svg/refresh.svg";
+import { ReactComponent as Feature } from "../../assets/svg/feature.svg";
+
 
 export default function Footer() {
   const links = [
     {
-      name: "Feature Rollouts",
+      name: (
+        <div className="footer-item">
+          <Feature></Feature>
+          Feature Rollouts
+        </div>
+      ),
       href: "#features",
     },
     {
-      name: "Request a feature",
+      name: (
+        <div className="footer-item">
+          <Refresh></Refresh>Request a feature
+        </div>
+      ),
       href: "#features",
     },
   ];
@@ -17,10 +29,10 @@ export default function Footer() {
         <div className="footer__content__left">IWTLNOW</div>
         <div className="footer__content__right">
           <div className="footer__content__right__items">
-            {links.map((link) => {
+            {links.map((link, index) => {
               return (
                 <a
-                  key={link.name}
+                  key={index}
                   href={link.href}
                   rel="noreferrer"
                   className="footer__content__right__items__item"

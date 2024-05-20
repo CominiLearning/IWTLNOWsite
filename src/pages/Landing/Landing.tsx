@@ -1,22 +1,43 @@
-import Features from "../../components/Features/Features";
+import Announcement from "../../components/Announcement/Announcement";
+import DiscordSection from "../../components/DiscordSection/DiscordSection";
 import Footer from "../../components/Footer/Footer";
+import Form from "../../components/Form/Form";
 import MainSection from "../../components/MainSection/MainSection";
+import Updates from "../../components/Updates/Updates";
 import { features } from "../../texts/texts";
 import "./Landing.scss";
+import plus1 from "../../assets/png/plus-1.png";
+import plus2 from "../../assets/png/plus-2.png";
 
 export default function Landing() {
   return (
-    <>
+    <div className="landing_page">
       <MainSection></MainSection>
-      {features.map((feature, index) => {
-        return (
-          <>
-            <Features key={index} {...feature} />
-            <div className="line"></div>
-          </>
-        );
-      })}
+      <div className="landing_page__announcement">
+        <Announcement>{features[0].description}</Announcement>
+      </div>
+      <div className="landing_page__form">
+        <Form></Form>
+      </div>
+      <div className="landing_page__discord" id="features">
+        <DiscordSection></DiscordSection>
+      </div>
+      <div className="landing_page__updates">
+        <Updates></Updates>
+        <div className="landing_page__updates__images">
+          <img
+            src={plus1}
+            alt=""
+            className="landing_page__updates__images__left"
+          ></img>
+          <img
+            src={plus2}
+            alt=""
+            className="landing_page__updates__images__right"
+          ></img>
+        </div>
+      </div>
       <Footer></Footer>
-    </>
+    </div>
   );
 }

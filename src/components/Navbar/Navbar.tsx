@@ -1,8 +1,9 @@
 import "./Navbar.scss";
-import logo from "../../images/png/logo.png";
 import { useState } from "react";
-import bars from "../../images/svg/bars.svg";
-import close from "../../images/svg/close.svg";
+import bars from "../../assets/svg/bars.svg";
+import close from "../../assets/svg/close.svg";
+import { ReactComponent as Refresh } from "../../assets/svg/refresh.svg";
+import { ReactComponent as Feature } from "../../assets/svg/feature.svg";
 
 export default function Navbar() {
   const [menuExpanded, setMenuExpanded] = useState(false);
@@ -14,12 +15,21 @@ export default function Navbar() {
       isExpanded: true,
     },
     {
-      name: "Feature Rollouts",
+      name: (
+        <div className="nav-item">
+          <Feature></Feature>
+          Feature Rollouts
+        </div>
+      ),
       href: "#features",
       isExpanded: false,
     },
     {
-      name: "Request a feature",
+      name: (
+        <div className="nav-item">
+          <Refresh></Refresh>Request a feature
+        </div>
+      ),
       href: "#features",
       isExpanded: false,
     },
@@ -28,14 +38,14 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <div className="navbar__left">
-        <div className="navbar__left__logo">
-          <img src={logo} alt="logo"></img>
+        <div className="navbar_brand">
+          <div className="navbar_brand__logo"></div>
+          <div className="navbar_brand__title cursive">IWTLNOW</div>
         </div>
-        <div className="navbar__left__text">IWTLNOW</div>
       </div>
       <div className="navbar__right">
         <div className="navbar__right__items">
-          {links.map((link) => {
+          {links.map((link, index) => {
             if (link.isExpanded) {
               return "";
             }
@@ -44,7 +54,7 @@ export default function Navbar() {
                 href={link.href}
                 rel="noreferrer"
                 className="navbar__right__items__item"
-                key={link.name}
+                key={index}
                 id="item"
               >
                 {link.name}
@@ -76,13 +86,13 @@ export default function Navbar() {
           </div>
         </div>
         <div className="navbar__menu_expanded__items">
-          {links.map((link) => {
+          {links.map((link, index) => {
             return (
               <a
                 href={link.href}
                 rel="noreferrer"
                 className="navbar__menu_expanded__items__item"
-                key={link.name}
+                key={index}
               >
                 {link.name}
               </a>

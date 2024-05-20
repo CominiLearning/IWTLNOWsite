@@ -1,0 +1,25 @@
+.table_column {
+  width: 100%;
+  border: 1px solid #000000;
+
+  border-radius: 15px;
+
+  &__header {
+    padding: 27px 43px;
+    background-color: #e7f3ff;
+    border-bottom: 1px solid black;
+    border-radius: 15px 15px 0 0;
+    font-size: var(--section-heading);
+    font-weight: 500;
+    color: var(--blue);
+    text-align: center;
+  }
+
+  &__content {
+    padding: 28px 40px;
+
+    & div:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+  }
+}

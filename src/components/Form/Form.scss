@@ -1,0 +1,33 @@
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__header {
+    width: 85%;
+    &__title {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      font-size: var(--header-2);
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    &__subtitle {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      font-size: var(--paragraph-1);
+      margin-top: 14px;
+    }
+  }
+
+  &__form {
+    width: 85%;
+    margin-top: 40px;
+  }
+}
