@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "default": "comini-iwtlnow"
+  },
+  "targets": {
+    "comini-iwtlnow": {
+      "hosting": {
+        "showcase": [
+          "iwtlnow-showcase"
+        ]
+      }
+    }
+  },
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}
