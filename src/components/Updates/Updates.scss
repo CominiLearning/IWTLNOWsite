@@ -23,7 +23,15 @@
     margin-top: 40px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    max-height: 350px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    gap: 30px;
     &__item {
       display: flex;
       align-items: center;
@@ -33,6 +41,14 @@
       padding: 14px 33px;
       border-radius: 15px;
       text-align: center;
+      width: 300px;
+      position: relative;
+      z-index: 10;
+
+
+      @media screen and (max-width: 425px){
+        width: 200px;
+      }
     }
   }
 }

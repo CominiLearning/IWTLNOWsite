@@ -11,7 +11,7 @@ export default function DiscordSection() {
     <div className="discord_section">
       <div className="discord_section__header">
         <div className="discord_section__header__title">
-          Got an Idea? Ask Away!
+          Have an idea? Please share it here
         </div>
         <div className="discord_section__header__subtitle">
           Do you have any special feature requests? Any one thing you would

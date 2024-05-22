@@ -6,13 +6,19 @@ import stars from "../../assets/png/stars.png";
 import star from "../../assets/png/star.png";
 import { ReactComponent as Down } from "../../assets/svg/down.svg";
 
-export default function MainSection() {
+interface MainSectionProps {
+  scrollToView: () => void;
+}
+
+export default function MainSection({ scrollToView }: MainSectionProps) {
   return (
     <div className="main_section">
       <div className="main_section__header">
         <div className="main_section__header__title">
-          <p>Welcome to IWTLNOW</p>
-          <p id="blue">Learning Has Never Been More Easier</p>
+          <p>IWTLNOW - I WANT TO LEARN NOW</p>
+          <p id="blue">
+            Learning Maps: Mind Maps to make learning simple and intuitive
+          </p>
         </div>
       </div>
       <div className="main_section__image_container">
@@ -22,8 +28,9 @@ export default function MainSection() {
             backgroundSize: "cover",
             backgroundPosition: "center",
             width: "85%",
-            aspectRatio: "800/556",
+            aspectRatio: "720/512",
             position: "relative",
+            maxWidth: "800px",
           }}
         >
           <div className="main_section__image_container__images">
@@ -51,8 +58,13 @@ export default function MainSection() {
         </div>
       </div>
       <div className="main_section__explore_now">
-        <p>Explore Now</p>
-        <Down></Down>
+        <div
+          className="main_section__explore_now__button"
+          onClick={scrollToView}
+        >
+          <p>Explore Now</p>
+          <Down></Down>
+        </div>
       </div>
       <div className="main_section__images">
         <img src={flower} alt="" className="main_section__images__flower"></img>

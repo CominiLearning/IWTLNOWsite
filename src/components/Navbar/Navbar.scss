@@ -127,25 +127,20 @@
   align-items: center;
   background-color: white;
   width: fit-content;
-  &__logo {
-    width: 40px;
-    aspect-ratio: 1 / 1;
-    border-radius: 100%;
-    background: #d7d7d7;
+  & img {
+    max-width: 30%;
   }
 
-  &__title {
-    font-size: 30px;
-    font-family: "Just Another Hand", cursive;
-    font-style: normal;
+  &__mobile {
+    display: none;
   }
 
-  @media screen and (max-width: 768px) {
-    &__logo {
-      width: 20px;
+  @media screen and (max-width: 767px) {
+    &__mobile {
+      display: block;
     }
-    &__title {
-      font-size: 20px;
+    &__desktop {
+      display: none;
     }
   }
 }

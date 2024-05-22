@@ -8,13 +8,25 @@ import { features } from "../../texts/texts";
 import "./Landing.scss";
 import plus1 from "../../assets/png/plus-1.png";
 import plus2 from "../../assets/png/plus-2.png";
+import { useRef } from "react";
 
 export default function Landing() {
+
+  const divRef = useRef<HTMLDivElement>(null);
+
+  function scrollToView() {
+    console.log(divRef.current);
+    
+    divRef.current?.scrollIntoView({
+      behavior:"smooth",
+    })
+  }
+
   return (
     <div className="landing_page">
-      <MainSection></MainSection>
+      <MainSection scrollToView={scrollToView}></MainSection>
       <div className="landing_page__announcement">
-        <Announcement>{features[0].description}</Announcement>
+        <Announcement divRef={divRef}>{features[0].description}</Announcement>
       </div>
       <div className="landing_page__form">
         <Form></Form>

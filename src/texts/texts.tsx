@@ -6,22 +6,24 @@ export const features: FeatureItem[] = [
     description: (
       <>
         <div>
-          Hey all! We are building tools to help make learning accessible to
-          everyone. Our first is IWTLNOW (IWTL is the commonly used internet
-          acronym for I Want To Learn). Learning something from scratch can be
-          daunting. ChatGPT and other AI models have now made it easy to ask
-          questions about just about anything and learn.
+          We are building tools to help make learning accessible to everyone.
+          Our first one is IWTLNOW (IWTL is the commonly used internet acronym
+          for I Want To Learn). Learning something from scratch can be tough and
+          confusing. Where do you start? Which direction do you explore first?
+          ChatGPT and other AI models have now made it easy to ask questions
+          about just about anything and learn.
         </div>
 
         <div>
-          As revolutionary as they are, a chat interface is too linear and
+          As revolutionary as they are, chat interfaces are too linear and
           tedious to learn any reasonably complex idea or concept. They tend to
-          be multi-dimensional, and chat isn't great to handle that.
+          be multi-dimensional, and chat isn't.
         </div>
         <div>
-          We are making IWTLNOW a hybrid mind-mapping tool with a rich interface
-          to help learners explore directions, at different levels, access
-          resources, and test their understanding - all in one place.
+          We are making IWTLNOW a hybrid mind-map tool, a learning map creator,
+          with a rich interface to help learners discover directions, explore
+          them at different levels, access resources, and test their
+          understanding - all in one place.
         </div>
       </>
     ),

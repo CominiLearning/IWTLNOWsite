@@ -4,6 +4,8 @@ import bars from "../../assets/svg/bars.svg";
 import close from "../../assets/svg/close.svg";
 import { ReactComponent as Refresh } from "../../assets/svg/refresh.svg";
 import { ReactComponent as Feature } from "../../assets/svg/feature.svg";
+import logo1 from "../../assets/logo/logo_desktop_lg.png"
+import logo2 from "../../assets/logo/Mobile.png"
 
 export default function Navbar() {
   const [menuExpanded, setMenuExpanded] = useState(false);
@@ -39,8 +41,8 @@ export default function Navbar() {
     <div className="navbar">
       <div className="navbar__left">
         <div className="navbar_brand">
-          <div className="navbar_brand__logo"></div>
-          <div className="navbar_brand__title cursive">IWTLNOW</div>
+          <img src={logo1} alt="iwtlnow" className="navbar_brand__desktop"></img>
+          <img src={logo2} alt="iwtlnow" className="navbar_brand__mobile"></img>
         </div>
       </div>
       <div className="navbar__right">
