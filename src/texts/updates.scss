@@ -1,0 +1,21 @@
+.updates_button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+
+  &__button {
+    background-color: var(--blue);
+    color: white;
+    padding: 9px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  &__text {
+    width: 100%;
+    font-weight: bold;
+  }
+}

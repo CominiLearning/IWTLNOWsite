@@ -26,7 +26,7 @@ export default function Landing() {
     <div className="landing_page">
       <MainSection scrollToView={scrollToView}></MainSection>
       <div className="landing_page__announcement">
-        <Announcement divRef={divRef}>{features[0].description}</Announcement>
+        <Announcement divRef={divRef}>{features[0]}</Announcement>
       </div>
       <div className="landing_page__form">
         <Form></Form>
