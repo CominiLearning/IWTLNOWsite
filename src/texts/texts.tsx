@@ -33,7 +33,7 @@ export const features: JSX.Element[] = [
       </button>
       <p className="updates_button__text">
         Note : This is a very early version and rough around the edges. You will
-        need to enter your openai key to try it out.
+        need to enter your openai key to try it out or please fill out the form below and we'll grant you early access
       </p>
     </div>
   </>,
